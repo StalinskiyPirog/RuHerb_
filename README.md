@@ -7,5 +7,5 @@
 - Git (GitHub)
 - TailwindCSS
 
-<span style="color:blue"> Данные для Supabase были сгенерированы с помощью браузерного расширения CloudParser </span>
+>> Данные для Supabase были сгенерированы с помощью браузерного расширения CloudParser
 
