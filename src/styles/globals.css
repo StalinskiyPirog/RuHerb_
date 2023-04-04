@@ -9,6 +9,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-size: 2em/1.3;
   font-family: 'Comfortaa', cursive;
 
 }
@@ -28,4 +29,22 @@ a {
 .Icon {
   margin: 0 auto;
   display: block;
+}
+h1 {
+  display: list-item;
+}
+h1::marker{
+  content: "🌿";
+}
+@counter-style leaf {
+  system: cyclic;
+  symbols: "🍀";
+  suffix: " ";
+}
+div.descr >div> ul,
+div.descr > ul
+{
+  list-style: leaf;
+  padding: 2em;
+  margin: 1em;
 }

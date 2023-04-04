@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+// Категория 1	Категория 2	Категория 3	Категория 4	Артикул	Заголовок	Цена	Цена поставщика	Цена поставщика 2	Валюта	Наличие	Описание	Изображения	Вес	Габариты	Производитель	Ссылка на товар	ID
+
+//!------------------------------
+//*     Продукт из примера парса
+model Product {
+  id        Int    @id @default(autoincrement())
+  category1 String
+  category2 String
+  category3 String
+  category4 String
+  title     String
+  articul   String
+  price     String
+  count     String
+  descr     String
+  images    String[]
+  clicks    Int   @default(0)
+  cart      Int   @default(0)
+}
+//!------------------------------
+//*     Запись клиента
+model Client {
+  id        Int    @id @default(autoincrement())
+  FIO       String
+  email     String
+  phone     String
+  sex       Boolean //?  Мужчина - 1, Женщина - 0
+}
+//!------------------------------
+//*     Запись всех взаимодействий клиентов
+//?     Здесь записывается каждое действие клиентов
+model Action{
+  index     String @unique @id
+  clicks    Int
+}
+//!------------------------------
