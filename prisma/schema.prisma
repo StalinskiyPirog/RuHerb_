@@ -14,17 +14,17 @@ datasource db {
 //!------------------------------
 //*     Продукт из примера парса
 model Product {
-  id        Int    @id @default(autoincrement())
   category1 String
   category2 String
   category3 String
   category4 String
-  title     String
   articul   String
+  title     String
   price     String
   count     String
   descr     String
   images    String[]
+  id        Int    @id @default(autoincrement())
   clicks    Int   @default(0)
   cart      Int   @default(0)
 }
@@ -34,14 +34,18 @@ model Client {
   id        Int    @id @default(autoincrement())
   FIO       String
   email     String
-  phone     String
+  phone     String?
   sex       Boolean //?  Мужчина - 1, Женщина - 0
+  password  String
 }
 //!------------------------------
-//*     Запись всех взаимодействий клиентов
-//?     Здесь записывается каждое действие клиентов
-model Action{
-  index     String @unique @id
-  clicks    Int
+//*     Метрика
+model Metrika{
+  id              Int @id
+  clicksMain      Int @default(0)
+  clicksAddToCart Int @default(0)
+  clicksToCart    Int @default(0)
+  clicksToProduct Int @default(0)
+  completedOrders Int @default(0)
 }
 //!------------------------------

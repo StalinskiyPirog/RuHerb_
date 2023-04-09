@@ -2,6 +2,7 @@ import { BreadCrumb } from "@/lib/ProductPage/BreadCrumb";
 import { PhotoBlock } from "@/lib/ProductPage/ProductPhoto";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 function createMarkup() {
@@ -53,6 +54,12 @@ function createMarkup() {
 }
 
 export default function ProductPage() {
+
+  const router = useRouter();
+  
+  const { category1, category2, p } = router.query;
+  const query = router.query;
+  
   const [data, setData] = useState(JSON);
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
@@ -65,8 +72,8 @@ export default function ProductPage() {
 
 
 
-  let category1: string = "Чайлдлайф";
-  let category2: string = "Товары для детей";
+  let category1_: string = "Чайлдлайф";
+  let category2_: string = "Товары для детей";
   let category3: string = "Здоровье детей";
   let category4: string = "Витамин D для детей";
   let articul: string = "CDL-10900";
@@ -85,8 +92,8 @@ export default function ProductPage() {
         <h2 className="text-md">Артикул: {articul}</h2>
       </div>
       <BreadCrumb
-        category1={category1}
-        category2={category2}
+        category1={category1_}
+        category2={category2_}
         category3={category3}
         category4={category4}
       />

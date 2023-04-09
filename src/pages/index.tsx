@@ -20,9 +20,9 @@ export default function Home() {
     return <IndexPageSkeleton />
   } else {
     return (
-        <div className="flex flex-col justify-center gap-20 p-10 pt-0">
+        <div className="flex flex-col justify-center gap-4 p-2  md:gap-20 md:p-10 md:pt-0">
           <Banner />
-          <h1 className="text-3xl">Ваше избранное</h1>
+          <h1 className="text-3xl mx-auto">Ваше избранное</h1>
           <CarouselWishlist data={data}/>
         </div>
       );

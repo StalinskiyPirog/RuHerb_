@@ -29,9 +29,9 @@ export default function SearchBox({router}:SearchBoxProps) {
             <path
               d="M22.1507 24.2936L17.1693 18.8573M19.8785 11.4532C19.9068 17.2085 15.7266 21.9357 10.5417 22.0117C5.35684 22.0877 1.13075 17.4838 1.10247 11.7285C1.07419 5.97329 5.25443 1.24611 10.4393 1.17008C15.6241 1.09405 19.8503 5.69798 19.8785 11.4532Z"
               stroke="#98CC61"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           </span>

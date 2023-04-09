@@ -17,7 +17,7 @@ export default function NavBar({router}:NavBarProps) {
 
   const { addItem, emptyCart, totalItems } = useCart();
   return (
-    <nav className="flex flex-row bg-transparent  w-full border-b-0  md:border-b-4 border-[#98cc61] z-[10000]  top-0 sticky p-4 h-18 sm:h-24 md:bg-[#fff]">
+    <nav className="md:flex flex-row hidden w-full border-b-0  md:border-b-4 border-[#98cc61] z-[10000]  top-0 sticky p-4 h-18 sm:h-24 md:bg-[#fff]">
       <div className="flex  space-x-16 justify-between mx-0  w-full items-center md:px-8">
         <div className=" flex md:hidden left-0  z=[11000]">
           <div className="text-[#98cc61] rounded-tl-3xl bg-white rounded-br-3xl border-4 border-[#98CC61] m-1 p-1">
@@ -72,14 +72,14 @@ export default function NavBar({router}:NavBarProps) {
                     <path
                       d="M18.5 20.3405C23.7163 20.3405 27.945 16.2349 27.945 11.1703C27.945 6.10566 23.7163 2 18.5 2C13.2836 2 9.05493 6.10566 9.05493 11.1703C9.05493 16.2349 13.2836 20.3405 18.5 20.3405Z"
                       stroke="#C17A0F"
-                      stroke-width="3"
+                      strokeWidth="3"
                     />
                     <path
                       d="M27.945 24.3276H28.6094C31.4673 24.3276 33.8781 26.3939 34.2326 29.1473L34.9703 34.8769C35.2521 37.0662 33.4938 39 31.2213 39H5.77857C3.50611 39 1.74787 37.0662 2.02973 34.8769L2.76739 29.1473C3.12188 26.3939 5.53265 24.3276 8.39067 24.3276H9.05494"
                       stroke="#C17A0F"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>
@@ -87,7 +87,7 @@ export default function NavBar({router}:NavBarProps) {
               </Link>
             </li>
             <li className="text-[#0000007b] p-1 text-lg font-bold  hover:text-orange-400 ">
-              <Link className="flex flex-col" href="/profile/favourite">
+              <Link className="flex flex-col" href="/favourite">
                 {/* Избранное лого */}
                 <span className="flex mx-auto">
                   <svg
@@ -100,9 +100,9 @@ export default function NavBar({router}:NavBarProps) {
                     <path
                       d="M11 2C6.02944 2 2 6.3753 2 11.7725C2 16.1297 3.57439 26.4702 19.0775 36.925C19.6389 37.3037 20.3611 37.3037 20.9225 36.925C36.4255 26.4702 38 16.1297 38 11.7725C38 6.3753 33.9705 2 29 2C24.0295 2 20 7.92274 20 7.92274C20 7.92274 15.9706 2 11 2Z"
                       stroke="#C17A0F"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>

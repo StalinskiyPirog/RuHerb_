@@ -20,7 +20,7 @@ function ProfileForm({ isLogin, setIsLogin }: ProfileFormProps) {
 export default function RegisterPage({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [Loading, setLoading] = useState(true);
   const [Data, setData] = useState();
 
@@ -54,9 +54,11 @@ export default function RegisterPage({
               </div>
 
               <div className="flex flex-row justify-center w-full h-52 pt-6 space-x-12 ">
-                <a className="bg-[#98CC61] w-3/12 rounded-lg"></a>
+                <a className="hover:border-white hover:bg-[#98CC61] bg-[#98CC61] w-3/12 p-4 rounded-lg">
+                  ЫЫЫЫ
+                </a>
 
-                <a className="border-4 border-[#98CC61] w-3/12 rounded-xl ">
+                <a className="hover:border-white hover:bg-[#98CC61] border-4 border-[#98CC61] w-3/12 rounded-xl " href="/profile">
                   <div className="container static w-full h-full flex flex-row justify-center ">
                     <span className="flex place-self-center">
                       <svg
@@ -85,7 +87,7 @@ export default function RegisterPage({
                     </h2>
                   </div>
                 </a>
-                <a className="border-4 border-[#98CC61] w-3/12 rounded-xl">
+                <a className="hover:border-white hover:bg-[#98CC61] border-4 border-[#98CC61] w-3/12 rounded-xl" href="/favourite">
                   <div className="container static w-full h-full flex flex-row justify-center">
                     <span className="flex place-self-center">
                       <svg
@@ -112,7 +114,7 @@ export default function RegisterPage({
               </div>
 
               <div className="flex flex-row justify-center space-x-12 pt-12">
-                <a className="border-4 border-[#98CC61] w-3/12 rounded-xl">
+                <a className="hover:border-white hover:bg-[#98CC61] border-4 border-[#98CC61] w-3/12 rounded-xl" href="/cart">
                   <div className="container static w-full h-full flex flex-row justify-center">
                     <span className="flex place-self-center">
                       <svg
@@ -143,7 +145,7 @@ export default function RegisterPage({
                     </h2>
                   </div>
                 </a>
-                <a className="border-4 border-[#98CC61] w-3/12 rounded-xl">
+                <a className="hover:border-white hover:bg-[#98CC61] border-4 border-[#98CC61] w-3/12 rounded-xl" href="/notimplemented">
                   <div className="container static w-full h-full flex flex-row justify-center">
                     <span className="flex place-self-center">
                       <svg
@@ -174,7 +176,7 @@ export default function RegisterPage({
                     </h2>
                   </div>
                 </a>
-                <a className=" border-4 border-[#98CC61] w-3/12 rounded-xl h-48">
+                <a className="hover:border-white hover:bg-[#98CC61]  border-4 border-[#98CC61] w-3/12 rounded-xl h-48" href="/notimplemented">
                   <div className="container static w-full h-full flex flex-row justify-center">
                     <span className="flex place-self-center">
                       <svg

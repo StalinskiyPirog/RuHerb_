@@ -3,7 +3,7 @@ import { Carousel } from "flowbite-react";
 
 function LeftArrow() {
   return (
-    <span className="flex pl-8 ">
+    <span className="hidden md:flex pl-8 ">
       <svg
         width="75"
         height="75"
@@ -15,9 +15,9 @@ function LeftArrow() {
         <path
           d="M42 23L29 37.2559L42 51.5118"
           stroke="#C17A0F"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </span>
@@ -25,7 +25,7 @@ function LeftArrow() {
 }
 function RightArrow() {
   return (
-    <span className="flex pr-8 ">
+    <span className="hidden pr-8 md:flex">
       <svg
         width="75"
         height="75"
@@ -37,9 +37,9 @@ function RightArrow() {
         <path
           d="M34 24L47.8109 38.2559L34 52.5118"
           stroke="#C17A0F"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </span>
@@ -48,7 +48,7 @@ function RightArrow() {
 
 export default function Banner() {
   return (
-    <div className="w-full h-[90vh]">
+    <div className="w-full block h-[40vh] md:h-[90vh]">
     <Carousel
       slideInterval={3000}
       leftControl={<LeftArrow />}
@@ -56,9 +56,11 @@ export default function Banner() {
     >
       <img
         src="/banner.jpg"
+        className=" duration-700 ease-in-out"
       />
       <img
         src="/banner.jpg"
+        className="duration-700 ease-in-out"
       />
     </Carousel>
     </div>

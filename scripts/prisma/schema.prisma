@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  category1 String
+  category2 String
+  category3 String
+  category4 String
+  articul   String
+  title     String
+  price     String
+  count     String
+  descr     String
+  images    String[]
+  id        Int      @id @default(autoincrement())
+  clicks    Int      @default(0)
+  cart      Int      @default(0)
+}
+
+model Client {
+  id       Int     @id @default(autoincrement())
+  FIO      String
+  email    String
+  phone    String?
+  sex      Boolean
+  password String
+}
+
+model Metrika {
+  id              Int @id
+  clicksMain      Int @default(0)
+  clicksAddToCart Int @default(0)
+  clicksToCart    Int @default(0)
+  clicksToProduct Int @default(0)
+  completedOrders Int @default(0)
+}

@@ -3,6 +3,7 @@ import CarouselWishlist from "@/lib/MainPage/CarouselWishlist";
 import CategoryMenu from "@/lib/MainPage/CategoryMenu";
 import { IndexPageSkeleton } from "@/lib/MainPage/IndexPageSkeleton";
 import FilterBlock from "@/lib/SearchPage/Filter";
+import ProductBlock from "@/lib/SearchPage/ProductBlock";
 import { SkeletonSearchPage } from "@/lib/SearchPage/SkeletonSearchPage";
 import { Pagination } from "flowbite-react";
 import { useRouter } from "next/router";
@@ -22,7 +23,14 @@ export default function SearchPage() {
   let page = p? +p : 1;
   const [currPage,setcurrPage]= useState(page);
   useEffect(() => {
-    fetch("/api/search-data")
+    fetch("/api/search-data",{
+      method: "POST",
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)||undefined,
+    })
       .then(async (res) => {
         setData(await res.json());
         setLoading(false);
@@ -67,20 +75,7 @@ export default function SearchPage() {
       </div>
 
       <div className="mt-4 bg-gray-200 border border-gray-200 grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3"></div>
-        {0 == 0 ? <div
-className="p-4 border rounded text-sky-700 bg-sky-50 border-sky-900/10"
-role="alert"
->
-<strong className="text-sm font-medium">Похоже, что ничего не было найдено</strong>
-
-
-</div>:<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  
-{/* {products.list.map((item)=><ProductCard key={item.id} id={item.id} title={item.title} price={item.price} rating={item.rating} category={item.category} src={item.images[0]}/>)}
-     */}
-
-</div>}
-
+        <ProductBlock data={data}/>
     </div>
     
   </div>
