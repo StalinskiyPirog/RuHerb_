@@ -26,10 +26,10 @@ export default function ProductPageAdmin(){
     }, [])
 
     if (data !== null){
-        router.push("/admin");
+       return(<>123</>);
     } else{ 
        
-            router.push("/admin/auth");
+            return(<>321</>);
        
     }
 

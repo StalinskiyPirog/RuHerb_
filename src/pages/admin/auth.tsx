@@ -26,7 +26,7 @@ export default async function AuthPageAdmin(){
     }, [])
 
     if (data !== null){
-        router.push("/admin");
+        return(<>sas</>)
     } else{ 
         
         return(

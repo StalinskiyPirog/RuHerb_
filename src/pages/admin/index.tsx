@@ -70,6 +70,6 @@ export default function UserPageAdmin() {
       </div>
     );
   } else {
-    router.push("/admin/auth");
+    return(<>123321321</>)
   }
 }

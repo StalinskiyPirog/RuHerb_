@@ -26,12 +26,12 @@ export default function UserPageAdmin(){
     }, [])
 
     if (data !== null){
-        router.push("/admin");
-    } else{ 
-       
-            router.push("/admin/auth");
-       
-    }
+      return(<>567</>);
+   } else{ 
+      
+           return(<>765</>);
+      
+   }
 
     
 }
